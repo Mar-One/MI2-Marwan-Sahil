@@ -5,12 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="beschrijving van de webpagina">
-    <link rel="van" href="MI2 opdracht 1\images\van">
-    <title> contact - Le méditeranéen </title>
+    <title> Van - filter oefening </title>
 
     <style>
-    
+    .flex-container {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
 
+}
+.normal, .grayscale, .sepia, .hue, .blur {
+background-color: gainsboro;
+border-style:solid;
+margin: 10px;
+
+
+}
     </style>
 
 
@@ -18,13 +29,16 @@
 </head>
 
 <body>
-
-
-    <header>
-       
-
-    </header>
-
+    <div class="fotoVan">
+        <img src="images/van.jpg" alt="foto_van_vrachtwagen">
+    </div>
+    <div class="flex-container">
+        <div class="normal">NORMAL</div>
+        <div class="grayscale">GRAYSCALE</div>
+        <div class="sepia">SEPIA</div>
+        <div class="hue">HUE</div>
+        <div class="blur">BLUR</div>
+      </div>
 
 
 </body>
