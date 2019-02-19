@@ -8,36 +8,68 @@
     <title> Van - filter oefening </title>
 
     <style>
-    .flex-container {
-    display: flex;
-    margin: 10px;
-    justify-content: center;
-    align-items: center;
+        @media screen and (max-width: 1rem) {
+            #normal, #grayscale, #sepia, #hue, #blur,.fotoVan
+          {
+                float: down;
+            }
+        }    
+        .flex-container {
+        display: flex;
+        margin: 0.625rem;
+        justify-content: center;
+        align-items: center;
 
-}
-.normal, .grayscale, .sepia, .hue, .blur {
-background-color: gainsboro;
-border-style:solid;
-margin: 10px;
+        }
+        
+        #grayscale{-webkit-filter: grayscale(100%);filter: grayscale(100%);}
+        #sepia{-webkit-filter: sepia(100%);filter: sepia(100%);}
+        #hue{-webkit-filter: hue-rotate(180deg);filter: hue-rotate(180deg);}
+        #blur{-webkit-filter: blur(4px);filter: blur(4px);}
 
 
-}
+        .fotoVan img{
+                
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+
+        }
+
+        #normal:hover, #grayscale:hover, #sepia:hover, #hue:hover, #blur:hover{
+        display: flex;
+        margin: 0.625rem;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: gainsboro;
+        border-color: black;
+
+        }
+        #normal, #grayscale, #sepia, #hue, #blur {
+        background-color: gainsboro;
+        margin: 0.625rem;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0.1875rem;
+        transition: 0.3s all ease-in-out;
+        border: 0.01rem #000 solid;
+        }
     </style>
 
-
+<script src="jquery.js"></script>
 
 </head>
 
 <body>
     <div class="fotoVan">
-        <img src="images/van.jpg" alt="foto_van_vrachtwagen">
+        <img src="images/van.jpg" alt="foto_van_vrachtwagen" id="img-van">
     </div>
     <div class="flex-container">
-        <div class="normal">NORMAL</div>
-        <div class="grayscale">GRAYSCALE</div>
-        <div class="sepia">SEPIA</div>
-        <div class="hue">HUE</div>
-        <div class="blur">BLUR</div>
+        <button id="normal">NORMAL</button>
+        <button id="grayscale">GRAYSCALE</button>
+        <button id="sepia">SEPIA</button>
+        <button id="hue">HUE</button>
+        <button id="blur">BLUR</button>
       </div>
 
 
