@@ -14,6 +14,7 @@
                 float: none;
             }
         }    
+
         .flex-container {
         display: flex;
         margin: 0.625rem;
@@ -21,6 +22,14 @@
         align-items: center;
 
         }
+
+        .flex-container2 {
+        display: flex;
+        margin: 0.625rem;
+        justify-content: center;
+        align-items: center;
+        }
+        
         
         
         .fotoVan img{     
@@ -32,15 +41,13 @@
         #img-van.sepia{filter: sepia(100%);}
         #img-van.grayscale{filter: grayscale(100%);}
         #img-van.hue{filter: hue-rotate(180deg);}
-        #img-van.blur{filter: blur(10px);}
-        
+        #img-van.blur{filter: blur(1rem);}
+        #img-van.opacity{filter: opacity(1)}
 
         .normal:hover, .grayscale:hover, .sepia:hover, .hue:hover, .blur:hover{
-        
         background-color: black;
         color: gainsboro;
         border-color: black;
-
         }
         .normal, .grayscale, .sepia, .hue, .blur {
         background-color: gainsboro;
@@ -50,6 +57,20 @@
         transition: 0.3s all ease-in-out;
         border: 0.01rem #000 solid;
         }
+
+        .slider {
+        -webkit-appearance: none;  
+        appearance: none;
+        width: 23.33rem; 
+        height: 0.5rem; 
+        background: #d3d3d3; 
+        outline: none;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        border-radius: 1rem;
+        }
+
     </style>
 
 
@@ -67,7 +88,16 @@
         <button  class="blur" id="btn-blur">BLUR</button>
       </div>
 
-      <script src="jquery.js"></script>
+
+      <div class="flex-container2">
+            <p>Opacity: </p>
+            <div class="slidercontainer">
+            <input type="range" min="0" max="100" value="100" class="slider" id="sliderid">
+            </div>
+            <p><span id="value"></span>%</p>
+      </div>
+
+      <script src="script.js"></script>
 
 
 </body>
